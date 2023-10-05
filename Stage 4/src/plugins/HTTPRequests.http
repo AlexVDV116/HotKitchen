@@ -1,0 +1,59 @@
+// GET USER INFO FROM JWT TOKEN
+GET http://localhost:28852/me
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDo4MDgwL2hlbGxvIiwiaXNzIjoiaHR0cDovLzAuMC4wLjA6Mjg4NTIvIiwiZW1haWwiOiJqb2huNkBlbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN0YWZmIiwidXNlcklkIjoxNiwiZXhwIjoxNjk2NTE0MDMxfQ.vshEvQbQMPP4wuxykYa4NaY0pVojHa2p1qmHx342KzY
+
+###
+// DELETE USER
+DELETE http://localhost:28852/user/3
+Accept: application/json
+
+###
+// UPDATE USER
+PUT http://localhost:28852/user/16
+Content-Type: application/json
+
+{"email": "john16@email.com",
+  "userType": "staff",
+  "password": "password123",
+  "name": "name",
+  "phone": "+79999999999",
+  "address": "address"
+}
+
+###
+// GET USER BY ID
+GET http://localhost:28852/user/16
+Accept: application/json
+
+###
+// GET ALL USERS
+GET http://localhost:28852/user
+Accept: application/json
+
+###
+// VALIDATE JWT TOKEN
+GET http://localhost:28852/validate
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDo4MDgwL2hlbGxvIiwiaXNzIjoiaHR0cDovLzAuMC4wLjA6Mjg4NTIvIiwiZW1haWwiOiJqb2huNUBlbWFpbC5jb20iLCJ1c2VyVHlwZSI6InVzZXIiLCJ1c2VySWQiOjE1LCJleHAiOjE2OTY1MTIzODJ9.syDAjKJq4KNbAzoBv56Df_jkP9S2Q7nNWLeX5kR9RoA
+
+###
+// AUTHENTICATE USER
+POST http://localhost:28852/signin
+Content-Type: application/json
+
+{"email": "john6@email.com",
+  "password": "password123"}
+
+###
+// REGISTER USER
+POST http://localhost:28852/signup
+Content-Type: application/json
+
+{
+  "email": "john6@email.com",
+  "userType": "user",
+  "password": "password123"
+}
+
+###
