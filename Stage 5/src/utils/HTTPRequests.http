@@ -1,0 +1,165 @@
+###
+// GET ALL ORDERS WITH STATUS IN PROGRESS (userType: all)
+GET http://localhost:28852/order/orderIncomplete
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+###
+// MARK ORDER AS READY (userType: staff)
+POST http://localhost:28852/order/1/markReady
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+###
+// GET ALL ORDERS (userType: all)
+GET http://localhost:28852/order/orderHistory
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+###
+// GET ORDER BY ID (userType: all)
+GET http://localhost:28852/order/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+###
+// CREATE NEW ORDER (userType: all)
+POST http://localhost:28852/order
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+{
+  "mealIds": [1, 2]
+}
+
+###
+// GET ALL CATEGORIES (userType: all)
+GET http://localhost:28852/categories
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+###
+// GET CATEGORY BY ID (userType: all)
+GET http://localhost:28852/categories/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+###
+// ADD NEW CATEGORY (userType: staff)
+POST http://localhost:28852/categories
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+{"title": "Category2",
+"description": "Test Category 2"}
+
+###
+// GET ALL MEALS (userType: all)
+GET http://localhost:28852/meals
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+###
+// GET MEAL BY ID (userType: all)
+GET http://localhost:28852/meals/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+###
+// ADD A MEAL (userType: staff)
+POST http://localhost:28852/meals
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+{
+  "title": "Test Meal4",
+  "price": 11.5,
+  "imageUrl": "https://www.google.com",
+  "categoryIds": [1]
+}
+
+###
+// DELETE USER FROM JWT TOKEN (userType: all)
+DELETE http://localhost:28852/user/me
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmYyQGVtYWlsLmNvbSIsInVzZXJUeXBlIjoiU1RBRkYiLCJ1c2VySWQiOjQsImV4cCI6MTY5NzQwODQyMX0.e7zTQYTdmbszgHTh5ifshRRqxDLWdCxRvnKGI4juvgs
+
+###
+// UPDATE USER FROM JWT TOKEN (userType: all)
+PUT http://localhost:28852/user/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+{"email": "staff@email.com",
+  "userType": "STAFF",
+  "password": "password123",
+  "name": "test",
+  "phone": "+79999999999",
+  "address": "address"}
+
+###
+
+###
+// GET USER INFO FROM JWT TOKEN (userType: all)
+GET http://localhost:28852/user/me
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmZAZW1haWwuY29tIiwidXNlclR5cGUiOiJTVEFGRiIsInVzZXJJZCI6MSwiZXhwIjoxNjk3NDA4NDIxfQ.ArphVLW-FmuckjFnd1OVlI_ITbZx0p_qRxxrQse4etY
+
+###
+// DELETE USER (userType: staff)
+DELETE http://localhost:28852/user/9
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmYyQGVtYWlsLmNvbSIsInVzZXJUeXBlIjoiU1RBRkYiLCJ1c2VySWQiOjQsImV4cCI6MTY5NzQwODQyMX0.e7zTQYTdmbszgHTh5ifshRRqxDLWdCxRvnKGI4juvgs
+
+###
+// UPDATE USER (userType: staff)
+PUT http://localhost:28852/user/9
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmYyQGVtYWlsLmNvbSIsInVzZXJUeXBlIjoiU1RBRkYiLCJ1c2VySWQiOjQsImV4cCI6MTY5NzQwODQyMX0.e7zTQYTdmbszgHTh5ifshRRqxDLWdCxRvnKGI4juvgs
+
+{"email": "staff3@email.com",
+  "userType": "staff",
+  "password": "password123",
+  "name": "name",
+  "phone": "+79999999999",
+  "address": "address"
+}
+
+###
+// GET USER BY ID (userType: staff)
+GET http://localhost:28852/user/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmYyQGVtYWlsLmNvbSIsInVzZXJUeXBlIjoiU1RBRkYiLCJ1c2VySWQiOjQsImV4cCI6MTY5NzQwODQyMX0.e7zTQYTdmbszgHTh5ifshRRqxDLWdCxRvnKGI4juvgs
+
+###
+// GET ALL USERS (userType: staff)
+GET http://localhost:28852/user/users
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmYyQGVtYWlsLmNvbSIsInVzZXJUeXBlIjoiU1RBRkYiLCJ1c2VySWQiOjQsImV4cCI6MTY5NzQwODQyMX0.e7zTQYTdmbszgHTh5ifshRRqxDLWdCxRvnKGI4juvgs
+
+###
+// VALIDATE JWT TOKEN (userType: all)
+GET http://localhost:28852/validate
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMC4wLjAuMDoyODg1Mi9oZWxsbyIsImlzcyI6Imh0dHA6Ly8wLjAuMC4wOjI4ODUyLyIsImVtYWlsIjoic3RhZmYyQGVtYWlsLmNvbSIsInVzZXJUeXBlIjoiU1RBRkYiLCJ1c2VySWQiOjQsImV4cCI6MTY5NzQwODQyMX0.e7zTQYTdmbszgHTh5ifshRRqxDLWdCxRvnKGI4juvgs
+
+###
+// AUTHENTICATE USER (no auth)
+POST http://localhost:28852/user/signin
+Content-Type: application/json
+
+{"email": "staff@email.com",
+  "password": "password123"}
+
+###
+// REGISTER USER (no auth)
+POST http://localhost:28852/user/signup
+Content-Type: application/json
+
+{
+  "email": "staff2@email.com",
+  "userType": "STAFF",
+  "password": "password123"
+}
+
+###
